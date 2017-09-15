@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GeoLoc</title>
+</head>
+<body>
+
+    <script>
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(onSuccess, onFailed);
+    
+        }
+        else{
+
+        }
+
+        function onSuccess(position){
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            console.log(lat, lng);
+        }
+
+        function onFailed(){
+            console.log('Marche pas !');
+        }
+    </script>
+    
+</body>
+</html>
