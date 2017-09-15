@@ -1,6 +1,9 @@
 // co websocket
+var storage = window.localStorage;
 var ws = new WebSocket('ws://localhost:8000/echo');
 
+storage.setItem('user','James');
+console.log(storage.getItem('user'));
 //ws.send({0: "add user", 1:"John"});
 
 //A la connexion si ouverte
